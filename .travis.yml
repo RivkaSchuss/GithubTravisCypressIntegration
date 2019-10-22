@@ -10,7 +10,7 @@ addons:
 script:
   - export APPLITOOLS_BATCH_ID=`echo ${TRAVIS_PULL_REQUEST_SHA:=$TRAVIS_COMMIT}`
   - echo $APPLITOOLS_BATCH_ID
-  - cd tutorial-cypress
+ # - cd tutorial-cypress
   - npm install
   - npx eyes-setup
   - npx cypress run --spec "cypress/integration/examples/applitools.spec.js"
